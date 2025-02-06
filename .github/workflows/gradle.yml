@@ -28,10 +28,10 @@ jobs:
     - name: make application-dev.yml
       if: contains(github.ref, 'dev')
       run: |
-        cd ./src/main/resources
-        touch ./application.yml
-        echo "${{ secrets.APPLICATION }}" | base64 --decode > ./application.yml
+        mkdir -p src/main/resources
+        echo "${{ secrets.APPLICATION }}" | base64 --decode > src/main/resources/application.yml
       shell: bash
+
 
      # Gradle Build를 위한 권한 부여
     - name: Grant execute permission for gradlew
