@@ -43,4 +43,3 @@ out/
 # application.yml
 application*.yml
 openapi3.yaml
-*.sql
