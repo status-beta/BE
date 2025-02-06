@@ -1,4 +1,4 @@
-FROM amazoncorretto:21
+FROM azul/zulu-openjdk-alpine:21-latest
 
 ARG JAR_FILE=/build/libs/*.jar
 
